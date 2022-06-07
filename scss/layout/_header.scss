@@ -1,0 +1,135 @@
+.header {
+  display: block;
+}
+
+.menu-icon {
+  margin: 0rem 10.2rem;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  &__logo {
+    margin-top: 0.6rem;
+    width: 15.224rem;
+    height: 6.702rem;
+    transform: translateX(50%);
+  }
+
+  &__img {
+    background-color: var(--color-grey-light-1);
+  }
+
+  &__button {
+    opacity: 0.3;
+    padding: 1.2rem 1rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__first {
+    span {
+      color: var(--color-grey-light-1);
+      margin-left: 0.9rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.user-food {
+  flex: 0 0 7%;
+  display: flex;
+  justify-content: space-between;
+  img {
+    padding: 1.1rem 1.2rem;
+    background-color: var(--color-grey-dark-3);
+    opacity: 0.5;
+
+    &:nth-child(2) {
+      margin: 0 1rem;
+    }
+  }
+  span {
+    padding: 1.1rem 1.2rem;
+    background-color: var(--color-grey-dark-3);
+    opacity: 0.5;
+  }
+}
+
+.header-img {
+  position: relative;
+  &__core {
+    height: 70rem;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    opacity: 0.6;
+    background: radial-gradient(
+      142.4% 142.4% at 50% 64.38%,
+      #000000 7.29%,
+      #000000 100%
+    );
+  }
+
+  &__introduce {
+    position: absolute;
+    color: var(--color-grey-light-1);
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+      font-weight: 700;
+      font-size: 6.4rem;
+      line-height: 8rem;
+      text-align: center;
+      padding: 0 33rem;
+      margin-bottom: 3.8rem;
+    }
+
+    button {
+      border: none;
+      padding: 1.8rem 3.2rem;
+      background-color: #e0a612;
+      color: var(--color-grey-dark-1);
+      cursor: pointer;
+      transition: all .2s;
+      &:hover {
+        background-color: var(--color-grey-light-1);
+        color: #e0a612;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.header-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  z-index: -1;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
